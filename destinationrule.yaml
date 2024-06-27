@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: my-destination-rule
+  namespace: default
+spec:
+  host: my-app-service
+  trafficPolicy:
+    outlierDetection:
+      baseEjectionTime: 3m
+      consecutive5xxErrors: 1
+      interval: 1s
+      maxEjectionPercent: 100

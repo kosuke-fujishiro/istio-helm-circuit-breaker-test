@@ -1,0 +1,4 @@
+helmfiles:
+  - path: ./istio-base/helmfile.yaml
+  - path: ./istiod/helmfile.yaml
+  - path: ./istio-ingressgateway/helmfile.yaml
